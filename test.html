@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script src="jquery.currency.converter.js"></script>
+		<script src="http://jquery-formatcurrency.googlecode.com/svn/trunk/jquery.formatCurrency.js"></script>
+		<script src="http://jquery-formatcurrency.googlecode.com/svn/tags/1.4.0/i18n/jquery.formatCurrency.all.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('span#currency1').convertCurrency({from: "USD", to: "EUR", region: 'dv-MV'});
+				$('span#currency2').convertCurrency({from: "EUR", to: "CAD", region: 'de-AT'});
+				$('span#currency3').convertCurrency({from: "USD", to: "JPY", region: 'de-AT'});
+				$('span#currency4').convertCurrency({from: "USD", to: "GBP", region: 'de-AT'});
+				$('span#currency5').convertCurrency({from: "JPY", to: "USD", region: 'de-AT'});
+			});
+		</script>
+	</head>
+	<body>
+		<div>Currency Conversion Test</div>
+		<p>Test #1: <span id="currency1" data-cur-value="100000">100000.00</span> EUR</p>
+		<p>Test #2: <span id="currency2" data-cur-value="100000">100000.00</span> CAD</p>
+		<p>Test #3: <span id="currency3" data-cur-value="100000">100000.00</span> JPY</p>
+		<p>Test #4: <span id="currency4" data-cur-value="100000">100000.00</span> GBP</p>
+		<p>Test #5: <span id="currency5" data-cur-value="10">10.00</span> USD</p>
+	</body>
+</html>
